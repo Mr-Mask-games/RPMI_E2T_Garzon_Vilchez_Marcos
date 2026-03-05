@@ -12,21 +12,21 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         // Comprobamos qué tecla se está pulsando para el movimiento del jugador
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(Vector3.forward * speed);
+            transform.Translate(0, 0, speed * Time.deltaTime);
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(Vector3.back * speed);
+            transform.Translate(0, 0, -speed * Time.deltaTime);
         }
-        else if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(Vector3.left * speed);
+            transform.Translate(-speed * Time.deltaTime, 0, 0);
         }
-        else if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(Vector3.right * speed);
+            transform.Translate(speed * Time.deltaTime, 0, 0);
         }
     }
 }
