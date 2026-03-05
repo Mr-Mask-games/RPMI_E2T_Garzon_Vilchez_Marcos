@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1052836477832972065}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 482688607823326393}
   - component: {fileID: 1502941532219643893}
   - component: {fileID: 2141780272526472146}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: L3_Cylinder
   m_TagString: Mergeable
   m_Icon: {fileID: 0}

@@ -15,33 +15,36 @@ public class PlayerDetector : MonoBehaviour
     public Color highlightColor;
 
     // Color original del jugador
-    private Color originalColor;
+    public Color originalColor;
 
     // Registra si ya está resaltado
-    private bool isHighlighted;
+    //private bool isHighlighted;
 
     // Update se ejecuta una vez por frame
     private void Update()
     {
         // Lanzamos un Raycast para detectar objetos mergeables
-        if (Physics.Raycast(transform.position, Vector3.up, detectionRange, LayerMask.GetMask("Mergeable")))
-        {
+        bool isHighlighted = (Physics.Raycast(transform.position, transform.forward, detectionRange, LayerMask.GetMask("Mergeable")));
             if (!isHighlighted)
             {
-                // Resalta al jugador cambiando su color
-                originalColor = playerMaterial.color;
-                playerMaterial.color = highlightColor;
-                isHighlighted = true;
-            }
+            print("no hay nada");
+            // Restaura el color original
+            playerMaterial.color = originalColor;
         }
         else
         {
             if (isHighlighted)
             {
-                // Restaura el color original
-                playerMaterial.color = originalColor;
-                isHighlighted = false;
+                print("objeto a la vista");
+                // Resalta al jugador cambiando su color
+                playerMaterial.color = highlightColor;
+                
             }
         }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.green;
+        Gizmos.DrawRay(transform.position, transform.forward * detectionRange);
     }
 }

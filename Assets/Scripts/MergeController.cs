@@ -5,6 +5,12 @@ using UnityEngine;
 /// </summary>
 public class MergeController : MonoBehaviour
 {
+    public UIManager manager;
+    private void Start()
+    {
+        print("buscando manager");
+        manager = GameObject.Find("UIManager").GetComponent<UIManager>();
+    }
     public Transform spawntransform;
     // Nivel de merge de este objeto (1, 2, 3 o 4)
     public int mergeLevel = 1;
@@ -41,6 +47,8 @@ public class MergeController : MonoBehaviour
                         // Si hay un prefab de siguiente nivel, lo instanciamos en la posición de este objeto
                         if (nextLevelPrefab != null)
                         {
+                            manager.mergeCount++;
+                            print(manager.mergeCount);
                             Instantiate(nextLevelPrefab, spawntransform.position, spawntransform.rotation);
                         }
 

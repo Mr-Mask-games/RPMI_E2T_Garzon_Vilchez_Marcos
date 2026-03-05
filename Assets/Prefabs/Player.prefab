@@ -153,9 +153,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93227696e4c19b6489cbfae000e416bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerDetector
-  detectionRange: 2
+  detectionRange: 5
   playerMaterial: {fileID: 2100000, guid: c90525054113ceb4c9f24bf5daf3f0e9, type: 2}
-  highlightColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: 0, g: 1, b: 0.034408808, a: 1}
+  originalColor: {r: 0.4117647, g: 0, b: 0, a: 0}
 --- !u!114 &-7477177577002089761
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7599818260086657084}
   - component: {fileID: 1728189526811127332}
   - component: {fileID: -3283264992189581889}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: L1_Sphere
   m_TagString: Mergeable
   m_Icon: {fileID: 0}
@@ -165,7 +165,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4858456446138772321}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
