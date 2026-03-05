@@ -5,6 +5,7 @@ using UnityEngine;
 /// </summary>
 public class MergeController : MonoBehaviour
 {
+    public Transform spawntransform;
     // Nivel de merge de este objeto (1, 2, 3 o 4)
     public int mergeLevel = 1;
 
@@ -22,7 +23,7 @@ public class MergeController : MonoBehaviour
         {
 
             // Comprobamos que el otro objeto es un objeto mergeable
-            if (collision.gameObject.CompareTag("Mergable"))
+            if (collision.gameObject.CompareTag("Mergeable"))
             {
                 // Obtenemos el componente MergeController del otro objeto
                 MergeController otherMerge = collision.gameObject.GetComponent<MergeController>();
@@ -40,7 +41,7 @@ public class MergeController : MonoBehaviour
                         // Si hay un prefab de siguiente nivel, lo instanciamos en la posición de este objeto
                         if (nextLevelPrefab != null)
                         {
-                            Instantiate(nextLevelPrefab, Vector3.zero, Quaternion.identity);
+                            Instantiate(nextLevelPrefab, spawntransform.position, spawntransform.rotation);
                         }
 
                         // Destruimos ambos objetos originales
