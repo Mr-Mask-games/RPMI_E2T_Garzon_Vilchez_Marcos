@@ -162,7 +162,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   spawntransform: {fileID: 1052836477832972065}
   mergeLevel: 2
-  nextLevelPrefab: {fileID: 2722527312466929059, guid: a8481fb43d7a5f14bbdfbe21390f2a68, type: 3}
+  nextLevelPrefab: {fileID: 0}
 --- !u!54 &2141780272526472146
 Rigidbody:
   m_ObjectHideFlags: 0
