@@ -159,9 +159,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8128f00fabbd8934dbc937985b943d1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MergeController
-  spawntransform: {fileID: 0}
+  manager: {fileID: 0}
+  spawntransform: {fileID: 1052836477832972065}
   mergeLevel: 2
-  nextLevelPrefab: {fileID: 0}
+  nextLevelPrefab: {fileID: 2722527312466929059, guid: a8481fb43d7a5f14bbdfbe21390f2a68, type: 3}
 --- !u!54 &2141780272526472146
 Rigidbody:
   m_ObjectHideFlags: 0
